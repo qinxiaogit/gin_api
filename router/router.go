@@ -18,6 +18,7 @@ func InitRouter(r *gin.Engine)  {
 	GroupV1 := r.Group("/v1")
 	{
 		GroupV1.Any("/index",v1.Index)
+		GroupV1.Any("/grpc",v1.Grpc)
 		GroupV1.Any("/member/add",v1.AddMember)
 	}
 	GroupV2 := r.Group("/v2")
